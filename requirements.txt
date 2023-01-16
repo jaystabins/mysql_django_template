@@ -6,6 +6,7 @@ django-environ==0.9.0
 django-crispy-forms==1.14.0
 crispy-bootstrap5==0.7
 mysqlclient==2.1.1
+argon2-cffi==23.3.0
 
 # Dev Imports
 isort==5.11.4

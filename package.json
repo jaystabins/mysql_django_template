@@ -1,6 +1,6 @@
 
   {
-    "name": "",
+    "name": "mysql_django_template",
     "version": "0.1.0",
     "dependencies": {},
     "devDependencies": {

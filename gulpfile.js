@@ -23,7 +23,7 @@ const uglify = require('gulp-uglify-es').default
 
 // Relative paths function
 function pathsConfig(appName) {
-  this.app = `./apps/templates/${pjson.name}`
+  this.app = `./apps/templates`
   const vendorsRoot = 'node_modules'
 
   return {
@@ -33,7 +33,7 @@ function pathsConfig(appName) {
       `${vendorsRoot}/bootstrap/dist/js/bootstrap.js`,
     ],
     app: this.app,
-    templates: `${this.app}/templates`,
+    templates: `${this.app}`,
     css: `${this.app}/static/css`,
     sass: `${this.app}/static/sass`,
     fonts: `${this.app}/static/fonts`,
@@ -133,6 +133,9 @@ function initBrowserSync() {
 
 // Watch
 function watchPaths() {
+  console.log(`${paths.sass}`)
+  console.log(`${paths.css}`)
+  console.log(`${paths.templates}`)
   watch(`${paths.sass}/*.scss`, styles)
   watch(`${paths.templates}/**/*.html`).on("change", reload)
   watch([`${paths.js}/*.js`, `!${paths.js}/*.min.js`], scripts).on("change", reload)
